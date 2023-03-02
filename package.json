@@ -1,0 +1,14 @@
+{
+  "name": "telegram-gpt",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "license": "MIT",
+  "dependencies": {
+    "@yuva1422/telegram.js": "^1.0.5",
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  },
+  "scripts": {
+    "start": "node bot.js"
+  }
+}
