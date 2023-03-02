@@ -30,7 +30,7 @@ client.on('message', (msg) => {
         console.log('User: ', msg.member.user)
 
         sendChat(chatID, messages).then((response) => {
-            msg.reply(response);
+            msg.chat.send(response);
 
             addMessage(msg.member.id, {
                 role: 'assistant',
