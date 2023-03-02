@@ -4,6 +4,8 @@ This is a Telegram bot that uses the new ChatGPT Api to generate text in a Teleg
 
 You can write him a message and he will reply with a generated text.
 
+It sends the last 5 messages to the API and uses the last message as the prompt. This is done in the queue.js file.
+
 ## How to use
 ```bash
 yarn install
