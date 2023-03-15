@@ -13,11 +13,13 @@ function get_allowed_users() {
 
 const client = new Telegram.Client()
 
-client.on('message', (msg) => {
+client.on('message', async (msg) => {
     // Check if the message is a command
     if (msg.content.startsWith('/')) return;
 
     if (get_allowed_users().includes(msg.member.chatID)) {
+        await msg.chat.startTyping();
+
         console.log('================');
         addMessage(msg.member.id, {
             role: 'user',
