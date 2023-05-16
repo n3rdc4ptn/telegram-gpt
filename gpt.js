@@ -12,7 +12,7 @@ async function answerChat(user_id, messages) {
     const client = await getOpenAI();
 
     const response = await client.createChatCompletion({
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-4',
         messages,
         user: user_id
     });
