@@ -1,0 +1,8 @@
+version: "3"
+services:
+  telegramgpt:
+    image: ghcr.io/n3rdc4ptn/telegramgpt:${VERSION:-latest}
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - ALLOWED_USERS=${ALLOWED_USERS}
