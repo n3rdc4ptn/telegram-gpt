@@ -30,6 +30,7 @@ client.on('message', async (msg) => {
         const chatID = msg.member.chatID.toString();
 
         console.log('User: ', msg.member.user)
+        console.log('Msg: ', msg.content)
 
         sendChat(chatID, messages).then((response) => {
             msg.chat.send(response);

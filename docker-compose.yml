@@ -1,0 +1,18 @@
+version: "3"
+# networks:
+#   default:
+#     external:
+#       name: proxy-network
+services:
+  telegramgpt:
+    image: ghcr.io/n3rdc4ptn/telegramgpt:${VERSION:-main}
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - ALLOWED_USERS=${ALLOWED_USERS}
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.${TRAEFIK_SERVICE_NAME:-telegramgpt}.entrypoints=websecure"
+    #   - "traefik.http.routers.${TRAEFIK_SERVICE_NAME:-telegramgpt}.rule=Host(`${TRAEFIK_DOMAIN}`)"
+    #   - "traefik.http.services.${TRAEFIK_SERVICE_NAME:-telegramgpt}.loadbalancer.server.port=8000"
+    #   - "traefik.docker.network=proxy-network"
